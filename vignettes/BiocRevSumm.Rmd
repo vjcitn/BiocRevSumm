@@ -1,17 +1,74 @@
-# BiocRevSumm
+---
+title: "BiocRevSumm: LLM-based summaries for Bioconductor package submissions"
+shorttitle: "Bioconductor submissions"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{BiocRevSumm: LLM-based summaries for Bioconductor package submissions}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
 
-The intent of this package is to analyze metadata about the series of
-repositories [in review at Bioconductor](https://github.com/bioconductor/contributions/issues).
-We include code to interrogate the contribution issues, summarize
-package capabilities, and categorize all packages in review.  Currently OpenAI
-LLMs are used to create summaries and classifications of packages.
+# Introduction
 
-The listing below is a demonstration created with the package on Nov 19 2025.
-There are clear deficiencies of labeling, and improved prompting and tooling
-are needed.  Some repositories are excluded because insufficient metadata
-is present in the DESCRIPTION or README.md.
+This package surveys issues in the Bioconductor contributions repositories
+with the aim of producing a structured summary of package objectives
+and capabilities.
 
-## Example grouping of GitHub Repositories under review at Bioconductor
+# Enumerating packages in review
+
+```{r geto, message=FALSE}
+library(BiocRevSumm)
+iss = get_repos_from_open_issues("bioconductor", "contributions")
+head(iss)
+```
+
+# Acquiring a summary for a contribution
+
+Here's an example package contributed from the bioconductor
+GitHub organization.
+
+```{r lk1, results="asis"}
+summ = summarize_submission("https://github.com/bioconductor/AnVILVRS")
+cat(strwrap(summ, 75), sep="\n")
+```
+
+# Creating a topical classification of packages in review
+
+To produce the list below, we used gpt-4o
+
+
+```
+prompt = "Here is a list of github repository URLs for R packages and associated textual 
+descriptions of package capabilities. Please group the packages into 
+10-12 conceptual topics focusing on the molecular biology methods addressed by the package.  
+Produce a markdown document with the grouping.  For each package in the grouping provide the URL as given."
+
+urls = get_repos_from_open_issues("bioconductor", "contributions")
+
+
+desc = lapply(seq_len(length(urls)), function(i) {
+   Sys.sleep(15); 
+   cat(urls[i], "\n"); try(summarize_submission(urls[i]))
+   }) # costs
+save(desc, file="desc.rda")
+
+library(ellmer)
+library(btw)
+ch = chat_openai(model="gpt-4o")
+dr = which(sapply(desc, function(x) is.na(x$summary)))
+if (length(dr)>0) desc = desc[-dr]
+ch$chat(btw(desc), prompt)
+```
+
+
+# Grouping of GitHub Repositories for R Packages in Molecular Biology
 
 ## 1. Single-Cell RNA-Seq Analysis
 
