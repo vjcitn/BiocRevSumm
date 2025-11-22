@@ -31,6 +31,22 @@ def get_issues(owner, repo):
     # Exclude pull requests
     return [issue for issue in all_issues if 'pull_request' not in issue]
 
+def get_all_issues(owner, repo):
+    url = f"https://api.github.com/repos/{owner}/{repo}/issues"
+    headers = {"Authorization": f"token {GITHUB_TOKEN}"}
+    params = {"state": "all", "per_page": 100, "page": 1}
+    all_issues = []
+    while True:
+        resp = requests.get(url, headers=headers, params=params)
+        resp.raise_for_status()
+        batch = resp.json()
+        if not batch:
+            break
+        all_issues.extend(batch)
+        params["page"] += 1
+    # Exclude pull requests
+    return [issue for issue in all_issues if 'pull_request' not in issue]
+
 def get_first_url_issue_and_comments(issue):
     # Check for a URL in the issue body
     headers = {"Authorization": f"token {GITHUB_TOKEN}"}
