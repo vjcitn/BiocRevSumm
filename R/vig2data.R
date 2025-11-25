@@ -43,7 +43,7 @@ vig2data = function(url ="https://bioconductor.org/packages/release/bioc/html/Vo
     description='Array of topics in the biosciences, e.g. ["DNA", "RNA", "chromosomal positions", "genes"]. Should be as specific as possible, and can overlap.',
     type_string()
   ),
-  focused = type_string(description = "Provide a concise summary of the article using distinctive vocabulary that would be helpful for embedding the summarized content.  Avoid subjective judgmental commentary.  Avoid generalities about hypotheses and generic activities of data analysis.  Limit the summary to 450 words."),
+  focused = type_string(description = "Provide a concise summary of the article using distinctive vocabulary that would be helpful for embedding the summarized content.  Avoid subjective judgmental commentary.  Avoid generalities about hypotheses and generic activities of data analysis.  Limit the summary to 450 words.  Markdown annotations should be as simple as possible.  Do not use asterisks for emphasis."),
   coherence = type_integer("Coherence of the article's key points, 0-100 (inclusive)"),
   persuasion = type_number("Article's persuasion score, 0.0-1.0 (inclusive)")
  )

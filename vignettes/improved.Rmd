@@ -45,7 +45,7 @@ build_vignette_path = function(ghuser, ghrepo, branch, vname) {
      ghuser, ghrepo, branch, vname
      )
    }
-url = build_vignette_path(ghuser, ghrepo, vigs[1])
+url = build_vignette_path(ghuser, ghrepo, branch="main", vname=vigs[1])
 url
 ```
 
@@ -58,31 +58,31 @@ writeLines(strwrap(ans$focused, 75))
 
 # Collect summaries, and categorize them
 
+## Get paths to vignette
+
+The first vignette found in the listing of vignettes folder with Rmd or Rnw suffix
+will be selected.
 ```{r dofull}
 issusers = sapply(strsplit(rs, "\\/"), "[", 4)
 issrepos = sapply(strsplit(rs, "\\/"), "[", 5)
 nrep = length(issusers)
-find_existing_branch <- function(user, repo, path, branches = c("main", "master", "devel")) {
-  for (branch in branches) {
-    url <- sprintf("https://api.github.com/repos/%s/%s/contents/%s?ref=%s", user, repo, path, branch)
-    res <- tryCatch({
-      r <- httr::GET(url)
-      if (httr::status_code(r) == 200) return(branch)
-      else stop("Not found")
-    }, error = function(e) NULL)
-    if (!is.null(res)) return(res)
-  }
-  return(NA)  # None found
-}
 
 vpaths = sapply(seq_len(nrep), function(i) {
+   print(issrepos[i])
    br = find_existing_branch(issusers[i], issrepos[i], path="vignettes", branches = c("main", "master", "devel"))
+print(br)
    if (is.na(br)) return(NA)
-   cat(i)
-   Sys.sleep(5)
-   vd = try(list_github_dir(user = issusers[i], repo = issrepos[i], branch=br, path="vignettes"), silent=TRUE)
+   Sys.sleep(15)  # watch out for rate limit
+   vd = try(list_github_dir(user = issusers[i], repo = issrepos[i], branch=br, path="vignettes"), silent=FALSE)
    if (inherits(vd, "try-error")) return(NA)
    vn = grep("Rmd|Rnw", vd, value=TRUE)[1]
-   build_vignette_path(issusers[i], issrepos[i], branch=br, vn)
+   build_vignette_path(issusers[i], issrepos[i], branch=br, vname=vn)
    })
+```
+
+## Use vig2data to summarize vignette (and thus package)
+
+```{r lk1v, results="asis"}
+z1 = vig2data(vpaths[1])
+z1$focused
 ```

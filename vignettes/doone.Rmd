@@ -1,0 +1,80 @@
+---
+title: "BiocRevSumm: overviews of packages in review at Bioconductor"
+shorttitle: "outlier dytection methods"
+author: "Vincent J. Carey, stvjc at channing.harvard.edu"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{BiocRevSumm: overviews of packages in review at Bioconductor}
+  %\VignetteEncoding{UTF-8}
+output:
+  BiocStyle::html_document:
+    highlight: pygments
+    number_sections: yes
+    theme: united
+    toc: yes
+---
+
+
+# Introduction
+
+The BiocRevSumm package includes tooling to 
+survey issues in the Bioconductor contributions repositories
+with the aim of producing a structured summary of package objectives
+and capabilities.
+
+# Tools for exploring packages under review
+
+## Enumerating packages in review
+
+```{r geto, message=FALSE}
+library(BiocRevSumm)
+iss = get_repos_from_open_issues("bioconductor", "contributions")
+head(iss)
+```
+
+## Finding the vignettes for high-resolution categorization
+
+```{r getv}
+lk1 = strsplit(iss, "\\/")[[1]]
+ghuser = lk1[4]
+ghrepo = lk1[5]
+lkvigs = list_github_dir(user = ghuser, repo = ghrepo, path="vignettes") 
+vigs = grep("rmd|Rmd|Rnw|rnw", lkvigs, value=TRUE)
+url = build_vignette_path(ghuser, ghrepo, branch="main", vname=vigs[1])
+url
+```
+
+## Summarize a selected vignette
+
+The summarization prompts are in the source code of `vig2data`.
+
+```{r dosumm}
+ans = vig2data(url)
+writeLines(strwrap(ans$focused, 75))
+```
+
+# Summaries for packages in review on 22 Nov 2025
+
+
+```{r res, results="asis", echo=FALSE}
+library(BiocRevSumm)
+data("viglist_23_nov_2025", package="BiocRevSumm")
+url2heading = function(x) {
+ stopifnot(length(x)==1)
+ z = strsplit(x, "\\/")[[1]]
+ sprintf('\n\n## Package %s from repo %s ([repo link](https://github.com/%s/%s))\n\n', z[5], z[4], z[4], z[5])
+ }
+for (i in seq_len(length(viglist_23_nov_2025))) {
+ curvig = viglist_23_nov_2025[[i]]
+ cat(url2heading(curvig), "\n")
+ Sys.sleep(15)
+ ans = vig2data( curvig )
+ z = strsplit(curvig, "\\/")[[1]]
+ fn = sprintf("%s_%s.rds", z[4], z[5])
+ saveRDS(ans, file=fn)
+ foc = ans$focused
+# foc = gsub("#", "\n\n##", foc)
+ cat(foc)
+}
+```
