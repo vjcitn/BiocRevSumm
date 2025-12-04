@@ -1,12 +1,24 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>/404.html</loc></url>
-<url><loc>/articles/BiocRevSumm.html</loc></url>
-<url><loc>/articles/index.html</loc></url>
-<url><loc>/authors.html</loc></url>
-<url><loc>/index.html</loc></url>
-<url><loc>/reference/get_repos_from_open_issues.html</loc></url>
-<url><loc>/reference/index.html</loc></url>
-<url><loc>/reference/pymods4issues.html</loc></url>
-<url><loc>/reference/summarize_submission.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/404.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/LICENSE-text.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/articles/BiocRevSumm.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/articles/index.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/authors.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/index.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/build_vignette_path.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/desc.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/find_existing_branch.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/get_issue_repo_urls.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/get_repo_file.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/get_repo_issues.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/get_repo_metadata.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/get_repos_from_all_issues.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/get_repos_from_open_issues.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/index.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/list_github_dir.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/pymods4issues.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/summarize_submission.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/vig2data.html</loc></url>
+<url><loc>https://github.com/vjcitn/BiocRevSumm/reference/viglist_23_nov_2025.html</loc></url>
 </urlset>
 

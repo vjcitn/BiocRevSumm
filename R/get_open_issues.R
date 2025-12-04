@@ -6,10 +6,9 @@
 #' @examples
 #' rs = get_repos_from_open_issues("bioconductor", "contributions")
 #' head(rs)
-#' @export
-get_repos_from_open_issues = function(owner, repo) {
- pysoft = pymods4issues()
- zz = pysoft$get_issues(owner, repo) # get all open issues, nomenclature for py function?
- ans = lapply(zz, pysoft$get_first_url_issue_and_comments)  # complex extraction of "Repository" from issues
- gsub("Repository: ", "", sapply(ans, "[", 1)) # extract the actual URL
-}
+#get_repos_from_open_issues = function(owner, repo) {
+# pysoft = pymods4issues()
+# zz = pysoft$get_issues(owner, repo) # get all open issues, nomenclature for py function?
+# ans = lapply(zz, pysoft$get_first_url_issue_and_comments)  # complex extraction of "Repository" from issues
+# gsub("Repository: ", "", sapply(ans, "[", 1)) # extract the actual URL
+#}

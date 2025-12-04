@@ -4,75 +4,59 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>BiocRevSumm: LLM-based summaries for Bioconductor package submissions • BiocRevSumm</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="BiocRevSumm: LLM-based summaries for Bioconductor package submissions">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="BiocRevSumm: LLM-based summaries for Bioconductor package submissions">
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">BiocRevSumm</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1</span>
-      </span>
-    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../articles/BiocRevSumm.html">Get started</a>
-</li>
-<li>
-  <a href="../reference/index.html">Reference</a>
-</li>
+    <a class="navbar-brand me-2" href="../index.html">BiocRevSumm</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.4</small>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="active nav-item"><a class="nav-link" href="../articles/BiocRevSumm.html">Get started</a></li>
+<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/vjcitn/BiocRevSumm/" class="external-link">
-    <span class="fab fa-github fa-lg"></span>
-
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="nav-link" href="https://github.com/vjcitn/BiocRevSumm/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
 
 
-      </header><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>BiocRevSumm: LLM-based summaries for Bioconductor package submissions</h1>
+
+<div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+
+      <h1>BiocRevSumm: LLM-based summaries for Bioconductor package submissions</h1>
                         <h4 data-toc-skip class="author">Vincent J. Carey, stvjc at channing.harvard.edu</h4>
             
-            <h4 data-toc-skip class="date">November 19, 2025</h4>
+            <h4 data-toc-skip class="date">December 04, 2025</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/vjcitn/BiocRevSumm/blob/HEAD/vignettes/BiocRevSumm.Rmd" class="external-link"><code>vignettes/BiocRevSumm.Rmd</code></a></small>
-      <div class="hidden name"><code>BiocRevSumm.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="https://github.com/vjcitn/BiocRevSumm/blob/HEAD/vignettes/BiocRevSumm.Rmd"><code>vignettes/BiocRevSumm.Rmd</code></a></small>
+      <div class="d-none name"><code>BiocRevSumm.Rmd</code></div>
     </div>
 
     
@@ -86,380 +70,142 @@
 <h2 id="enumerating-packages-in-review">Enumerating packages in review<a class="anchor" aria-label="anchor" href="#enumerating-packages-in-review"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/vjcitn/BiocRevSumm" class="external-link">BiocRevSumm</a></span><span class="op">)</span></span>
-<span><span class="va">iss</span> <span class="op">=</span> <span class="fu"><a href="../reference/get_repos_from_open_issues.html">get_repos_from_open_issues</a></span><span class="op">(</span><span class="st">"bioconductor"</span>, <span class="st">"contributions"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">iss</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">## [1] "https://github.com/traversc/fraq"              </span></span>
-<span><span class="co">## [2] "https://github.com/wenmm/EMTscoreData"         </span></span>
-<span><span class="co">## [3] "https://github.com/gbucci/ClonalSim"           </span></span>
-<span><span class="co">## [4] "https://github.com/libscran/scrapple"          </span></span>
-<span><span class="co">## [5] "https://github.com/sparthib/HumanRetinaLRSData"</span></span>
-<span><span class="co">## [6] "https://github.com/gggraca/MetaboAnnotatoR"</span></span></code></pre>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/vjcitn/BiocRevSumm">BiocRevSumm</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/stopifnot.html" class="external-link">stopifnot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nchar.html" class="external-link">nchar</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html" class="external-link">Sys.getenv</a></span><span class="op">(</span><span class="st">"GITHUB_TOKEN"</span><span class="op">)</span><span class="op">)</span><span class="op">&gt;</span><span class="fl">0</span><span class="op">)</span></span>
+<span><span class="va">iss</span> <span class="op">=</span> <span class="fu"><a href="../reference/get_repo_issues.html">get_repo_issues</a></span><span class="op">(</span><span class="st">"bioconductor"</span>, <span class="st">"contributions"</span>, <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html" class="external-link">Sys.getenv</a></span><span class="op">(</span><span class="st">"GITHUB_TOKEN"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">urls</span> <span class="op">=</span> <span class="fu"><a href="../reference/get_issue_repo_urls.html">get_issue_repo_urls</a></span><span class="op">(</span><span class="va">iss</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">urls</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">##   number                              title</span></span>
+<span><span class="co">## 1   4047                           EMTscore</span></span>
+<span><span class="co">## 2   4041 RFGeneRank: New Package Submission</span></span>
+<span><span class="co">## 3   4039                          panoramic</span></span>
+<span><span class="co">## 4   4038                            DenoIST</span></span>
+<span><span class="co">## 5   4036                        PostChicago</span></span>
+<span><span class="co">## 6   4033                               fraq</span></span>
+<span><span class="co">##                                           repo_url</span></span>
+<span><span class="co">## 1                https://github.com/wenmm/EMTscore</span></span>
+<span><span class="co">## 2 https://github.com/Abdulaziz-Albeshri/RFGeneRank</span></span>
+<span><span class="co">## 3       https://github.com/plevritis-lab/panoramic</span></span>
+<span><span class="co">## 4              https://github.com/aaronkwc/DenoIST</span></span>
+<span><span class="co">## 5   https://github.com/FeldmannLabDKFZ/PostChicago</span></span>
+<span><span class="co">## 6                 https://github.com/traversc/fraq</span></span></code></pre>
 </div>
 <div class="section level2">
-<h2 id="acquiring-a-summary-for-a-contribution">Acquiring a summary for a contribution<a class="anchor" aria-label="anchor" href="#acquiring-a-summary-for-a-contribution"></a>
+<h2 id="finding-the-vignettes-for-high-resolution-categorization">Finding the vignettes for high-resolution categorization<a class="anchor" aria-label="anchor" href="#finding-the-vignettes-for-high-resolution-categorization"></a>
 </h2>
-<p>Here’s an example package contributed from the bioconductor GitHub organization.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">summ</span> <span class="op">=</span> <span class="fu"><a href="../reference/summarize_submission.html">summarize_submission</a></span><span class="op">(</span><span class="st">"https://github.com/bioconductor/AnVILVRS"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strwrap.html" class="external-link">strwrap</a></span><span class="op">(</span><span class="va">summ</span>, <span class="fl">75</span><span class="op">)</span>, sep<span class="op">=</span><span class="st">"\n"</span><span class="op">)</span></span></code></pre></div>
-<p>The AnVILVRS GitHub repository is an R package that provides an interface to the AnVIL VRS Toolkit, a Python library that works with the Global Alliance for Genomics and Health (GA4GH) Variation Representation Specification (VRS) standard. The package enables users to translate variant identifiers from different formats (e.g., gnomAD, SPDI, HGVS, Beacon) into GA4GH VRS Allele IDs and vice versa. It also allows users to retrieve allele frequency data from the 1000 Genomes Project based on VRS Allele IDs. The package is designed to process Variant Call Format (VCF) files and perform lookup operations on GA4GH VRS identifiers, thus facilitating the exchange and sharing of genomic information in a standardized format. <a href="https://github.com/bioconductor/AnVILVRS" class="external-link uri">https://github.com/bioconductor/AnVILVRS</a></p>
+<code class="sourceCode R"><span><span class="va">u1</span> <span class="op">=</span> <span class="va">urls</span><span class="op">$</span><span class="va">repo_url</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
+<span><span class="va">lk1</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/strsplit.html" class="external-link">strsplit</a></span><span class="op">(</span><span class="va">u1</span>, <span class="st">"\\/"</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
+<span><span class="va">ghuser</span> <span class="op">=</span> <span class="va">lk1</span><span class="op">[</span><span class="fl">4</span><span class="op">]</span></span>
+<span><span class="va">ghrepo</span> <span class="op">=</span> <span class="va">lk1</span><span class="op">[</span><span class="fl">5</span><span class="op">]</span></span>
+<span><span class="va">lkvigs</span> <span class="op">=</span> <span class="fu"><a href="../reference/list_github_dir.html">list_github_dir</a></span><span class="op">(</span>user <span class="op">=</span> <span class="va">ghuser</span>, repo <span class="op">=</span> <span class="va">ghrepo</span>, path<span class="op">=</span><span class="st">"vignettes"</span><span class="op">)</span> </span>
+<span><span class="va">vigs</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grep</a></span><span class="op">(</span><span class="st">"Rmd"</span>, <span class="va">lkvigs</span>, value<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co"># arbitrarily choose first</span></span>
+<span><span class="va">build_vignette_path</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">ghuser</span>, <span class="va">ghrepo</span>, <span class="va">branch</span>, <span class="va">vname</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/sprintf.html" class="external-link">sprintf</a></span><span class="op">(</span></span>
+<span>    <span class="st">"https://raw.githubusercontent.com/%s/%s/refs/heads/%s/vignettes/%s"</span>,</span>
+<span>     <span class="va">ghuser</span>, <span class="va">ghrepo</span>, <span class="va">branch</span>, <span class="va">vname</span></span>
+<span>     <span class="op">)</span></span>
+<span>   <span class="op">}</span></span>
+<span><span class="va">url</span> <span class="op">=</span> <span class="fu"><a href="../reference/build_vignette_path.html">build_vignette_path</a></span><span class="op">(</span><span class="va">ghuser</span>, <span class="va">ghrepo</span>, branch<span class="op">=</span><span class="st">"main"</span>, vname<span class="op">=</span><span class="va">vigs</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">url</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] "https://raw.githubusercontent.com/wenmm/EMTscore/refs/heads/main/vignettes/EMTscore.Rmd"</span></span></code></pre>
 </div>
 <div class="section level2">
-<h2 id="creating-a-topical-classification-of-packages-in-review">Creating a topical classification of packages in review<a class="anchor" aria-label="anchor" href="#creating-a-topical-classification-of-packages-in-review"></a>
+<h2 id="summarize-a-selected-vignette">Summarize a selected vignette<a class="anchor" aria-label="anchor" href="#summarize-a-selected-vignette"></a>
 </h2>
-<p>To produce the list below, we used gpt-4o</p>
-<pre><code><span><span class="va">prompt</span> <span class="op">=</span> <span class="st">"Here is a list of github repository URLs for R packages and associated textual </span></span>
-<span><span class="st">descriptions of package capabilities. Please group the packages into </span></span>
-<span><span class="st">10-12 conceptual topics focusing on the molecular biology methods addressed by the package.  </span></span>
-<span><span class="st">Produce a markdown document with the grouping.  For each package in the grouping provide the URL as given."</span></span>
-<span></span>
-<span><span class="va">urls</span> <span class="op">=</span> <span class="fu"><a href="../reference/get_repos_from_open_issues.html">get_repos_from_open_issues</a></span><span class="op">(</span><span class="st">"bioconductor"</span>, <span class="st">"contributions"</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span><span class="va">desc</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">urls</span><span class="op">)</span><span class="op">)</span>, <span class="kw">function</span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">{</span></span>
-<span>   <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">15</span><span class="op">)</span>; </span>
-<span>   <span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="va">urls</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, <span class="st">"\n"</span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu"><a href="../reference/summarize_submission.html">summarize_submission</a></span><span class="op">(</span><span class="va">urls</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
-<span>   <span class="op">}</span><span class="op">)</span> <span class="co"># costs</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/save.html" class="external-link">save</a></span><span class="op">(</span><span class="va">desc</span>, file<span class="op">=</span><span class="st">"desc.rda"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ellmer.tidyverse.org" class="external-link">ellmer</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/posit-dev/btw" class="external-link">btw</a></span><span class="op">)</span></span>
-<span><span class="va">ch</span> <span class="op">=</span> <span class="fu"><a href="https://ellmer.tidyverse.org/reference/chat_openai.html" class="external-link">chat_openai</a></span><span class="op">(</span>model<span class="op">=</span><span class="st">"gpt-4o"</span><span class="op">)</span></span>
-<span><span class="va">dr</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">desc</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">x</span><span class="op">$</span><span class="va">summary</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">dr</span><span class="op">)</span><span class="op">&gt;</span><span class="fl">0</span><span class="op">)</span> <span class="va">desc</span> <span class="op">=</span> <span class="va">desc</span><span class="op">[</span><span class="op">-</span><span class="va">dr</span><span class="op">]</span></span>
-<span><span class="va">ch</span><span class="op">$</span><span class="fu">chat</span><span class="op">(</span><span class="fu"><a href="https://posit-dev.github.io/btw/reference/btw.html" class="external-link">btw</a></span><span class="op">(</span><span class="va">desc</span><span class="op">)</span>, <span class="va">prompt</span><span class="op">)</span></span></code></pre>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">ans</span> <span class="op">=</span> <span class="fu"><a href="../reference/vig2data.html">vig2data</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/writeLines.html" class="external-link">writeLines</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strwrap.html" class="external-link">strwrap</a></span><span class="op">(</span><span class="va">ans</span><span class="op">$</span><span class="va">focused</span>, <span class="fl">75</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<p>The article “EMTscore Analysis and Plots” details the utilization of various computational methods within the R package “EMTscore” to assess epithelial-mesenchymal transition (EMT) at the genetic level. EMT is characterized by the transformation of epithelial cells into mesenchymal cells, a process pivotal in cancer metastasis and tissue regeneration. By computing and visualizing EMT scores, researchers can better understand this biological transition both in bulk RNA-sequencing and single-cell RNA-sequencing data. The article explains key aspects such as:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Objective of EMTscore:</strong> The package allows for the computation of scores for epithelial (E) and mesenchymal (M) gene sets as well as the option for user-defined gene sets. It provides multiple algorithms for score calculation, including nonnegative PCA (nnPCA), AUCell, ssGSEA, JASMINE, and SCSE.</p></li>
+<li><p><strong>Analytical Techniques:</strong> By leveraging nnPCA, the article demonstrates how multiple mesenchymal phenotype scores can be identified and correlated with EMT scores and other gene sets. Additional functionalities include: - Loading and annotating cell/sample data. - Utilizing existing datasets and gene signatures, such as the Panchy_et_al signatures. - Computing gene set scores using bulk RNA-seq example walk-throughs.</p></li>
+<li><p><strong>Visualizations and Plot Construction:</strong> - Plotting E-M score correlations to observe phenotypic variations across cells. - Dimension-specific scatter plots for mesenchymal (M) scores, highlighting potential gene divergence or cellular heterogeneity. - Creation of combined plots for comprehensive visualization of between-score relationships. - Analysis of score distributions across cell types using histograms. - Heatmaps of gene expression data.</p></li>
+<li><p><strong>Single-Cell RNA-seq Analysis:</strong> The package extends functionality to single-cell data, indicating steps for importing, EMT scoring, and plotting dynamic gene expression changes along pseudotime. Gaussian Mixture Models (GMM) can be used for clustering EMT states and correlating these states with biological processes.</p></li>
+<li><p><strong>Pathway and Process Integration:</strong> In assessing pathways associated with EMT, the article illustrates how pathway activity scores can be calculated and correlated with EMT scores to identify significant biological pathways. - The significant positive and negative correlations among pathways are visualized using bar charts.</p></li>
+<li><p><strong>Additional Biological Scores:</strong> Calculation of stemness and senescence scores provide insights into cellular states like pluripotency or aging. The article explores relationships between these scores with EMT scores in single-cell data.</p></li>
+</ol>
+<p>Overall, the article offers a systematic guide for researchers seeking to quantify and visualize EMT processes at the genomic level, with the flexibility to incorporate custom datasets and gene sets within their EMTscore analyses.</p>
 </div>
 <div class="section level2">
-<h2 id="grouping-of-github-repositories-for-r-packages-in-molecular-biology">Grouping of GitHub Repositories for R Packages in Molecular Biology<a class="anchor" aria-label="anchor" href="#grouping-of-github-repositories-for-r-packages-in-molecular-biology"></a>
+<h2 id="collect-summaries-and-categorize-them">Collect summaries, and categorize them<a class="anchor" aria-label="anchor" href="#collect-summaries-and-categorize-them"></a>
 </h2>
 <div class="section level3">
-<h3 id="single-cell-rna-seq-analysis">1. Single-Cell RNA-Seq Analysis<a class="anchor" aria-label="anchor" href="#single-cell-rna-seq-analysis"></a>
+<h3 id="get-paths-to-vignette">Get paths to vignette<a class="anchor" aria-label="anchor" href="#get-paths-to-vignette"></a>
 </h3>
-<ul>
-<li>
-<strong>posDemux</strong>: Demultiplexing and filtering sequence reads with combinatorial barcodes.
-<ul>
-<li>URL: <a href="https://github.com/yaccos/posDemux" class="external-link uri">https://github.com/yaccos/posDemux</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>fourSynergy</strong>: Ensemble algorithm for analyzing 4C-seq data.
-<ul>
-<li>URL: <a href="https://github.com/sophiewind/fourSynergy" class="external-link uri">https://github.com/sophiewind/fourSynergy</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>CellMentor</strong>: Dimensional reduction using supervised cell type-aware non-negative matrix factorization.
-<ul>
-<li>URL: <a href="https://github.com/petrenkokate/CellMentor/" class="external-link uri">https://github.com/petrenkokate/CellMentor/</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>hammers</strong>: Tools for single-cell RNA sequencing (scRNA-seq) data analysis.
-<ul>
-<li>URL: <a href="https://github.com/andrei-stoica26/hammers" class="external-link uri">https://github.com/andrei-stoica26/hammers</a>
-</li>
-</ul>
-</li>
-</ul>
+<p>The first vignette found in the listing of vignettes folder with Rmd or Rnw suffix will be selected.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">rs</span> <span class="op">=</span> <span class="va">urls</span><span class="op">$</span><span class="va">repo_url</span></span>
+<span><span class="va">issusers</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strsplit.html" class="external-link">strsplit</a></span><span class="op">(</span><span class="va">rs</span>, <span class="st">"\\/"</span><span class="op">)</span>, <span class="st">"["</span>, <span class="fl">4</span><span class="op">)</span></span>
+<span><span class="va">issrepos</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/strsplit.html" class="external-link">strsplit</a></span><span class="op">(</span><span class="va">rs</span>, <span class="st">"\\/"</span><span class="op">)</span>, <span class="st">"["</span>, <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">nrep</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">issusers</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">vpaths</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="va">nrep</span><span class="op">)</span><span class="op">)</span>, <span class="kw">function</span><span class="op">(</span><span class="va">i</span><span class="op">)</span> <span class="op">{</span></span>
+<span>   <span class="va">br</span> <span class="op">=</span> <span class="fu"><a href="../reference/find_existing_branch.html">find_existing_branch</a></span><span class="op">(</span><span class="va">issusers</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, <span class="va">issrepos</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, path<span class="op">=</span><span class="st">"vignettes"</span>, branches <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"main"</span>, <span class="st">"master"</span>, <span class="st">"devel"</span>,</span>
+<span>     <span class="st">"origin"</span><span class="op">)</span><span class="op">)</span></span>
+<span>   <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">br</span><span class="op">)</span><span class="op">)</span> <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="cn">NA</span><span class="op">)</span></span>
+<span>   <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">5</span><span class="op">)</span>  <span class="co"># watch out for rate limit</span></span>
+<span>   <span class="va">vd</span> <span class="op">=</span> <span class="kw"><a href="https://rdrr.io/r/base/try.html" class="external-link">try</a></span><span class="op">(</span><span class="fu"><a href="../reference/list_github_dir.html">list_github_dir</a></span><span class="op">(</span>user <span class="op">=</span> <span class="va">issusers</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, repo <span class="op">=</span> <span class="va">issrepos</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, branch<span class="op">=</span><span class="va">br</span>, path<span class="op">=</span><span class="st">"vignettes"</span><span class="op">)</span>, silent<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
+<span>   <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">inherits</a></span><span class="op">(</span><span class="va">vd</span>, <span class="st">"try-error"</span><span class="op">)</span><span class="op">)</span> <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="cn">NA</span><span class="op">)</span></span>
+<span>   <span class="va">vn</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html" class="external-link">grep</a></span><span class="op">(</span><span class="st">"Rmd|Rnw"</span>, <span class="va">vd</span>, value<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span></span>
+<span>   <span class="fu"><a href="../reference/build_vignette_path.html">build_vignette_path</a></span><span class="op">(</span><span class="va">issusers</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, <span class="va">issrepos</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, branch<span class="op">=</span><span class="va">br</span>, vname<span class="op">=</span><span class="va">vn</span><span class="op">)</span></span>
+<span>   <span class="op">}</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">vpaths</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## [1] "https://raw.githubusercontent.com/wenmm/EMTscore/refs/heads/main/vignettes/EMTscore.Rmd"                       </span></span>
+<span><span class="co">## [2] "https://raw.githubusercontent.com/Abdulaziz-Albeshri/RFGeneRank/refs/heads/main/vignettes/RFGeneRank-intro.Rmd"</span></span>
+<span><span class="co">## [3] "https://raw.githubusercontent.com/plevritis-lab/panoramic/refs/heads/main/vignettes/tutorial.Rmd"              </span></span>
+<span><span class="co">## [4] "https://raw.githubusercontent.com/aaronkwc/DenoIST/refs/heads/master/vignettes/denoist_spe.Rmd"                </span></span>
+<span><span class="co">## [5] "https://raw.githubusercontent.com/FeldmannLabDKFZ/PostChicago/refs/heads/main/vignettes/PostChicago.Rmd"       </span></span>
+<span><span class="co">## [6] "https://raw.githubusercontent.com/traversc/fraq/refs/heads/main/vignettes/fraq_getting_started.Rmd"</span></span></code></pre>
 </div>
 <div class="section level3">
-<h3 id="tumor-and-mutational-data-simulation">2. Tumor and Mutational Data Simulation<a class="anchor" aria-label="anchor" href="#tumor-and-mutational-data-simulation"></a>
+<h3 id="use-vig2data-to-summarize-vignette-and-thus-package">Use vig2data to summarize vignette (and thus package)<a class="anchor" aria-label="anchor" href="#use-vig2data-to-summarize-vignette-and-thus-package"></a>
 </h3>
-<ul>
-<li>
-<strong>ClonalSim</strong>: Simulating the clonal evolution of tumors with realistic sequencing noise.
-<ul>
-<li>URL: <a href="https://github.com/gbucci/ClonalSim" class="external-link uri">https://github.com/gbucci/ClonalSim</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>MutSeqRData</strong>: Experimental data package for mutational sequencing analysis.
-<ul>
-<li>URL: <a href="https://github.com/EHSRB-BSRSE-Bioinformatics/MutSeqRData" class="external-link uri">https://github.com/EHSRB-BSRSE-Bioinformatics/MutSeqRData</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="metabolomics">3. Metabolomics<a class="anchor" aria-label="anchor" href="#metabolomics"></a>
-</h3>
-<ul>
-<li>
-<strong>MetaboAnnotatoR</strong>: Metabolite annotation of features from Liquid Chromatography-Mass Spectrometry datasets.
-<ul>
-<li>URL: <a href="https://github.com/gggraca/MetaboAnnotatoR" class="external-link uri">https://github.com/gggraca/MetaboAnnotatoR</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>MetaProViz</strong>: Mechanistic hypotheses in metabolomics data by integrating literature.
-<ul>
-<li>URL: <a href="https://github.com/saezlab/MetaProViz" class="external-link uri">https://github.com/saezlab/MetaProViz</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>MetabolomicsPipeline</strong>: Analyzing metabolomics data with subpathway analysis and other tools.
-<ul>
-<li>URL: <a href="https://github.com/datalifecycle-ua/MetabolomicsPipeline/" class="external-link uri">https://github.com/datalifecycle-ua/MetabolomicsPipeline/</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="gene-and-protein-expression-analysis">4. Gene and Protein Expression Analysis<a class="anchor" aria-label="anchor" href="#gene-and-protein-expression-analysis"></a>
-</h3>
-<ul>
-<li>
-<strong>scrapple</strong>: Wrappers for single-cell RNA-Seq analysis.
-<ul>
-<li>URL: <a href="https://github.com/libscran/scrapple" class="external-link uri">https://github.com/libscran/scrapple</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>TraianProt</strong>: Downstream analysis of quantitative proteomic data.
-<ul>
-<li>URL: <a href="https://github.com/SamueldelaCamaraFuentes/TraianProt" class="external-link uri">https://github.com/SamueldelaCamaraFuentes/TraianProt</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>OAtools</strong>: Streamlined analysis of gene expression data on OpenArray platform.
-<ul>
-<li>URL: <a href="https://github.com/uwvirology-ngs/OAtools" class="external-link uri">https://github.com/uwvirology-ngs/OAtools</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="chromatin-and-dna-interaction">5. Chromatin and DNA Interaction<a class="anchor" aria-label="anchor" href="#chromatin-and-dna-interaction"></a>
-</h3>
-<ul>
-<li>
-<strong>annoLinker</strong>: Annotation of genomic peaks using DNA interaction data.
-<ul>
-<li>URL: <a href="https://github.com/jianhong/annoLinker" class="external-link uri">https://github.com/jianhong/annoLinker</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>SMTrackR</strong>: Visualization of protein-DNA binding states on sequenced DNA molecules.
-<ul>
-<li>URL: <a href="https://github.com/satyanarayan-rao/SMTrackR" class="external-link uri">https://github.com/satyanarayan-rao/SMTrackR</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="genomic-visualization-and-enrichment-analysis">6. Genomic Visualization and Enrichment Analysis<a class="anchor" aria-label="anchor" href="#genomic-visualization-and-enrichment-analysis"></a>
-</h3>
-<ul>
-<li>
-<strong>GOfan</strong>: Visualization of Gene Ontology enrichment results using sunburst layout.
-<ul>
-<li>URL: <a href="https://github.com/jianhong/GOfan" class="external-link uri">https://github.com/jianhong/GOfan</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>ClusterGVis</strong>: Clustering and visualization of gene expression data.
-<ul>
-<li>URL: <a href="https://github.com/junjunlab/ClusterGVis" class="external-link uri">https://github.com/junjunlab/ClusterGVis</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>ImageArray</strong>: Handling large image arrays in digital pathology and microscopy.
-<ul>
-<li>URL: <a href="https://github.com/BIMSBbioinfo/ImageArray" class="external-link uri">https://github.com/BIMSBbioinfo/ImageArray</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="data-processing-and-pipeline-tools">7. Data Processing and Pipeline Tools<a class="anchor" aria-label="anchor" href="#data-processing-and-pipeline-tools"></a>
-</h3>
-<ul>
-<li>
-<strong>tidyprint</strong>: Enhancing usability of ‘SummarizedExperiment’ objects within a tidy workflow.
-<ul>
-<li>URL: <a href="https://github.com/tidyomics/tidyprint" class="external-link uri">https://github.com/tidyomics/tidyprint</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>proBatch</strong>: Analysis and correction of batch effects in high-throughput experiments.
-<ul>
-<li>URL: <a href="https://github.com/Freddsle/proBatch" class="external-link uri">https://github.com/Freddsle/proBatch</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>StatescopeR</strong>: Discovering cell states from gene expression profiles and bulk RNA.
-<ul>
-<li>URL: <a href="https://github.com/tgac-vumc/StatescopeR" class="external-link uri">https://github.com/tgac-vumc/StatescopeR</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="genetic-variation-and-splicing-impact">8. Genetic Variation and Splicing Impact<a class="anchor" aria-label="anchor" href="#genetic-variation-and-splicing-impact"></a>
-</h3>
-<ul>
-<li>
-<strong>fRagmentomics</strong>: Extraction of fragmentomic features and mutational status from cfDNA.
-<ul>
-<li>URL: <a href="https://github.com/ElsaB-Lab/fRagmentomics" class="external-link uri">https://github.com/ElsaB-Lab/fRagmentomics</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>GXwasR</strong>: Conducting sex-aware genetic association analyses in complex traits.
-<ul>
-<li>URL: <a href="https://github.com/boseb/GXwasR" class="external-link uri">https://github.com/boseb/GXwasR</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>SpliceImpactR</strong>: The impact of alternative RNA splicing on protein structure.
-<ul>
-<li>URL: <a href="https://github.com/fiszbein-lab/SpliceImpactR" class="external-link uri">https://github.com/fiszbein-lab/SpliceImpactR</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="machine-learning-and-prediction-models">9. Machine Learning and Prediction Models<a class="anchor" aria-label="anchor" href="#machine-learning-and-prediction-models"></a>
-</h3>
-<ul>
-<li>
-<strong>asuri</strong>: Discovery of marker genes for survival and risk prediction.
-<ul>
-<li>URL: <a href="https://github.com/jdelasrivas-lab/asuri" class="external-link uri">https://github.com/jdelasrivas-lab/asuri</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>dioscRi</strong>: Deep learning-based tool for clinical prediction in cytometry data.
-<ul>
-<li>URL: <a href="https://github.com/ecool50/dioscRi" class="external-link uri">https://github.com/ecool50/dioscRi</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>CENTRE</strong>: Prediction of cell-type specific enhancer target interactions.
-<ul>
-<li>URL: <a href="https://github.com/slrvv/CENTRE" class="external-link uri">https://github.com/slrvv/CENTRE</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="epigenomics-and-transcriptomics-analysis">10. Epigenomics and Transcriptomics Analysis<a class="anchor" aria-label="anchor" href="#epigenomics-and-transcriptomics-analysis"></a>
-</h3>
-<ul>
-<li>
-<strong>epiSeeker</strong>: Annotation and visualization of multi-omics epigenetic data.
-<ul>
-<li>URL: <a href="https://github.com/YuLab-SMU/epiSeeker" class="external-link uri">https://github.com/YuLab-SMU/epiSeeker</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>decemedip</strong>: Deconvoluting cell types in MeDIP-seq data using a Bayesian model.
-<ul>
-<li>URL: <a href="https://github.com/nshen7/decemedip" class="external-link uri">https://github.com/nshen7/decemedip</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>HumanRetinaLRSData</strong>: Dataset package for RNA sequencing and gene expression analysis.
-<ul>
-<li>URL: <a href="https://github.com/sparthib/HumanRetinaLRSData" class="external-link uri">https://github.com/sparthib/HumanRetinaLRSData</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="variant-representation-and-interoperability">11. Variant Representation and Interoperability<a class="anchor" aria-label="anchor" href="#variant-representation-and-interoperability"></a>
-</h3>
-<ul>
-<li>
-<strong>AnVILVRS</strong>: Interface to the AnVIL VRS Toolkit for genomic variation representation.
-<ul>
-<li>URL: <a href="https://github.com/Bioconductor/AnVILVRS" class="external-link uri">https://github.com/Bioconductor/AnVILVRS</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>immReferent</strong>: Interface for immune receptor (TCR/BCR) and HLA gene IMGT reference data.
-<ul>
-<li>URL: <a href="https://github.com/BorchLab/immReferent" class="external-link uri">https://github.com/BorchLab/immReferent</a>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section level3">
-<h3 id="cytometry-and-protein-interaction">12. Cytometry and Protein Interaction<a class="anchor" aria-label="anchor" href="#cytometry-and-protein-interaction"></a>
-</h3>
-<ul>
-<li>
-<strong>CompensAID</strong>: Detection of spillover errors in flow cytometry data.
-<ul>
-<li>URL: <a href="https://github.com/Olsman/CompensAID" class="external-link uri">https://github.com/Olsman/CompensAID</a>
-</li>
-</ul>
-</li>
-<li>
-<strong>SMTrackR</strong>: Protein-DNA binding and chromatin accessibility with DamID-seq data.
-<ul>
-<li>URL: <a href="https://github.com/marshall-lab/damidBind" class="external-link uri">https://github.com/marshall-lab/damidBind</a>
-</li>
-</ul>
-</li>
-</ul>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">z1</span> <span class="op">=</span> <span class="fu"><a href="../reference/vig2data.html">vig2data</a></span><span class="op">(</span><span class="va">vpaths</span><span class="op">[</span><span class="fl">6</span><span class="op">]</span><span class="op">)</span></span>
+<span><span class="va">z1</span><span class="op">$</span><span class="va">focused</span></span></code></pre></div>
 </div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-      </div>
-
+<div class="section level2">
+<h2 id="code-that-produced-summaries-for-packages-in-review-on-22-nov-2025">Code that produced summaries for packages in review on 22 Nov 2025<a class="anchor" aria-label="anchor" href="#code-that-produced-summaries-for-packages-in-review-on-22-nov-2025"></a>
+</h2>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/vjcitn/BiocRevSumm">BiocRevSumm</a></span><span class="op">)</span> </span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"viglist_23_nov_2025"</span>, package<span class="op">=</span><span class="st">"BiocRevSumm"</span><span class="op">)</span></span>
+<span><span class="va">url2heading</span> <span class="op">=</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span></span>
+<span> <span class="fu"><a href="https://rdrr.io/r/base/stopifnot.html" class="external-link">stopifnot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">==</span><span class="fl">1</span><span class="op">)</span></span>
+<span> <span class="va">z</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/strsplit.html" class="external-link">strsplit</a></span><span class="op">(</span><span class="va">x</span>, <span class="st">"\\/"</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
+<span> <span class="fu"><a href="https://rdrr.io/r/base/sprintf.html" class="external-link">sprintf</a></span><span class="op">(</span><span class="st">'\n\n## Package %s from repo %s ([repo link](https://github.com/%s/%s))\n\n'</span>, <span class="va">z</span><span class="op">[</span><span class="fl">5</span><span class="op">]</span>, <span class="va">z</span><span class="op">[</span><span class="fl">4</span><span class="op">]</span>, <span class="va">z</span><span class="op">[</span><span class="fl">4</span><span class="op">]</span>, <span class="va">z</span><span class="op">[</span><span class="fl">5</span><span class="op">]</span><span class="op">)</span></span>
+<span> <span class="op">}</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_len</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">viglist_23_nov_2025</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span> <span class="va">curvig</span> <span class="op">=</span> <span class="va">viglist_23_nov_2025</span><span class="op">[[</span><span class="va">i</span><span class="op">]</span><span class="op">]</span></span>
+<span> <span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="fu">url2heading</span><span class="op">(</span><span class="va">curvig</span><span class="op">)</span>, <span class="st">"\n"</span><span class="op">)</span></span>
+<span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.sleep.html" class="external-link">Sys.sleep</a></span><span class="op">(</span><span class="fl">15</span><span class="op">)</span></span>
+<span> <span class="va">ans</span> <span class="op">=</span> <span class="fu"><a href="../reference/vig2data.html">vig2data</a></span><span class="op">(</span> <span class="va">curvig</span> <span class="op">)</span></span>
+<span> <span class="va">z</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/strsplit.html" class="external-link">strsplit</a></span><span class="op">(</span><span class="va">curvig</span>, <span class="st">"\\/"</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
+<span> <span class="va">fn</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sprintf.html" class="external-link">sprintf</a></span><span class="op">(</span><span class="st">"%s_%s.rds"</span>, <span class="va">z</span><span class="op">[</span><span class="fl">4</span><span class="op">]</span>, <span class="va">z</span><span class="op">[</span><span class="fl">5</span><span class="op">]</span><span class="op">)</span></span>
+<span> <span class="fu"><a href="https://rdrr.io/r/base/readRDS.html" class="external-link">saveRDS</a></span><span class="op">(</span><span class="va">ans</span>, file<span class="op">=</span><span class="va">fn</span><span class="op">)</span></span>
+<span> <span class="va">foc</span> <span class="op">=</span> <span class="va">ans</span><span class="op">$</span><span class="va">focused</span></span>
+<span> <span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="va">foc</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p></p>
-<p>Developed by Vince Carey.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p>Developed by Vince Carey.</p>
 </div>
 
-<div class="pkgdown">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+<div class="pkgdown-footer-right">
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
-
 
 
 

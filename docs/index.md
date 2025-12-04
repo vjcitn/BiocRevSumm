@@ -1,0 +1,207 @@
+<div id="main" class="col-md-9" role="main">
+
+# BiocRevSumm
+
+<div class="section level1">
+
+The intent of this package is to analyze metadata about the series of
+repositories [in review at
+Bioconductor](https://github.com/bioconductor/contributions/issues). We
+include code to interrogate the contribution issues, summarize package
+capabilities, and categorize all packages in review. Currently OpenAI
+LLMs are used to create summaries and classifications of packages.
+
+The listing below is a demonstration created with the package on Nov 19
+2025. There are clear deficiencies of labeling, and improved prompting
+and tooling are needed. Some repositories are excluded because
+insufficient metadata is present in the DESCRIPTION or README.md.
+
+<div class="section level2">
+
+## Example grouping of GitHub Repositories under review at Bioconductor
+
+</div>
+
+<div class="section level2">
+
+## 1. Single-Cell RNA-Seq Analysis
+
+-   **posDemux**: Demultiplexing and filtering sequence reads with
+    combinatorial barcodes.
+    -   URL: <https://github.com/yaccos/posDemux>
+-   **fourSynergy**: Ensemble algorithm for analyzing 4C-seq data.
+    -   URL: <https://github.com/sophiewind/fourSynergy>
+-   **CellMentor**: Dimensional reduction using supervised cell
+    type-aware non-negative matrix factorization.
+    -   URL: <https://github.com/petrenkokate/CellMentor/>
+-   **hammers**: Tools for single-cell RNA sequencing (scRNA-seq) data
+    analysis.
+    -   URL: <https://github.com/andrei-stoica26/hammers>
+
+</div>
+
+<div class="section level2">
+
+## 2. Tumor and Mutational Data Simulation
+
+-   **ClonalSim**: Simulating the clonal evolution of tumors with
+    realistic sequencing noise.
+    -   URL: <https://github.com/gbucci/ClonalSim>
+-   **MutSeqRData**: Experimental data package for mutational sequencing
+    analysis.
+    -   URL: <https://github.com/EHSRB-BSRSE-Bioinformatics/MutSeqRData>
+
+</div>
+
+<div class="section level2">
+
+## 3. Metabolomics
+
+-   **MetaboAnnotatoR**: Metabolite annotation of features from Liquid
+    Chromatography-Mass Spectrometry datasets.
+    -   URL: <https://github.com/gggraca/MetaboAnnotatoR>
+-   **MetaProViz**: Mechanistic hypotheses in metabolomics data by
+    integrating literature.
+    -   URL: <https://github.com/saezlab/MetaProViz>
+-   **MetabolomicsPipeline**: Analyzing metabolomics data with
+    subpathway analysis and other tools.
+    -   URL: <https://github.com/datalifecycle-ua/MetabolomicsPipeline/>
+
+</div>
+
+<div class="section level2">
+
+## 4. Gene and Protein Expression Analysis
+
+-   **scrapple**: Wrappers for single-cell RNA-Seq analysis.
+    -   URL: <https://github.com/libscran/scrapple>
+-   **TraianProt**: Downstream analysis of quantitative proteomic data.
+    -   URL: <https://github.com/SamueldelaCamaraFuentes/TraianProt>
+-   **OAtools**: Streamlined analysis of gene expression data on
+    OpenArray platform.
+    -   URL: <https://github.com/uwvirology-ngs/OAtools>
+
+</div>
+
+<div class="section level2">
+
+## 5. Chromatin and DNA Interaction
+
+-   **annoLinker**: Annotation of genomic peaks using DNA interaction
+    data.
+    -   URL: <https://github.com/jianhong/annoLinker>
+-   **SMTrackR**: Visualization of protein-DNA binding states on
+    sequenced DNA molecules.
+    -   URL: <https://github.com/satyanarayan-rao/SMTrackR>
+
+</div>
+
+<div class="section level2">
+
+## 6. Genomic Visualization and Enrichment Analysis
+
+-   **GOfan**: Visualization of Gene Ontology enrichment results using
+    sunburst layout.
+    -   URL: <https://github.com/jianhong/GOfan>
+-   **ClusterGVis**: Clustering and visualization of gene expression
+    data.
+    -   URL: <https://github.com/junjunlab/ClusterGVis>
+-   **ImageArray**: Handling large image arrays in digital pathology and
+    microscopy.
+    -   URL: <https://github.com/BIMSBbioinfo/ImageArray>
+
+</div>
+
+<div class="section level2">
+
+## 7. Data Processing and Pipeline Tools
+
+-   **tidyprint**: Enhancing usability of ‘SummarizedExperiment’ objects
+    within a tidy workflow.
+    -   URL: <https://github.com/tidyomics/tidyprint>
+-   **proBatch**: Analysis and correction of batch effects in
+    high-throughput experiments.
+    -   URL: <https://github.com/Freddsle/proBatch>
+-   **StatescopeR**: Discovering cell states from gene expression
+    profiles and bulk RNA.
+    -   URL: <https://github.com/tgac-vumc/StatescopeR>
+
+</div>
+
+<div class="section level2">
+
+## 8. Genetic Variation and Splicing Impact
+
+-   **fRagmentomics**: Extraction of fragmentomic features and
+    mutational status from cfDNA.
+    -   URL: <https://github.com/ElsaB-Lab/fRagmentomics>
+-   **GXwasR**: Conducting sex-aware genetic association analyses in
+    complex traits.
+    -   URL: <https://github.com/boseb/GXwasR>
+-   **SpliceImpactR**: The impact of alternative RNA splicing on protein
+    structure.
+    -   URL: <https://github.com/fiszbein-lab/SpliceImpactR>
+
+</div>
+
+<div class="section level2">
+
+## 9. Machine Learning and Prediction Models
+
+-   **asuri**: Discovery of marker genes for survival and risk
+    prediction.
+    -   URL: <https://github.com/jdelasrivas-lab/asuri>
+-   **dioscRi**: Deep learning-based tool for clinical prediction in
+    cytometry data.
+    -   URL: <https://github.com/ecool50/dioscRi>
+-   **CENTRE**: Prediction of cell-type specific enhancer target
+    interactions.
+    -   URL: <https://github.com/slrvv/CENTRE>
+
+</div>
+
+<div class="section level2">
+
+## 10. Epigenomics and Transcriptomics Analysis
+
+-   **epiSeeker**: Annotation and visualization of multi-omics
+    epigenetic data.
+    -   URL: <https://github.com/YuLab-SMU/epiSeeker>
+-   **decemedip**: Deconvoluting cell types in MeDIP-seq data using a
+    Bayesian model.
+    -   URL: <https://github.com/nshen7/decemedip>
+-   **HumanRetinaLRSData**: Dataset package for RNA sequencing and gene
+    expression analysis.
+    -   URL: <https://github.com/sparthib/HumanRetinaLRSData>
+
+</div>
+
+<div class="section level2">
+
+## 11. Variant Representation and Interoperability
+
+-   **AnVILVRS**: Interface to the AnVIL VRS Toolkit for genomic
+    variation representation.
+    -   URL: <https://github.com/Bioconductor/AnVILVRS>
+-   **immReferent**: Interface for immune receptor (TCR/BCR) and HLA
+    gene IMGT reference data.
+    -   URL: <https://github.com/BorchLab/immReferent>
+
+</div>
+
+<div class="section level2">
+
+## 12. Cytometry and Protein Interaction
+
+-   **CompensAID**: Detection of spillover errors in flow cytometry
+    data.
+    -   URL: <https://github.com/Olsman/CompensAID>
+-   **SMTrackR**: Protein-DNA binding and chromatin accessibility with
+    DamID-seq data.
+    -   URL: <https://github.com/marshall-lab/damidBind>
+
+</div>
+
+</div>
+
+</div>
